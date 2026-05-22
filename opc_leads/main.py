@@ -7,9 +7,12 @@ from pathlib import Path
 from opc_leads.classifier.rules import classify_target
 from opc_leads.outreach_queue.builder import build_queue
 from opc_leads.scorer.scoring import score_opportunity
+from opc_leads.config.agent_env import load_agent_env
+from opc_leads.feedback import summarize_feedback
 
 
-def run(input_path: Path, output_path: Path) -> None:
+def run(input_path: Path, output_path: Path, feedback_path: Path | None = None) -> None:
+    env = load_agent_env()
     leads = []
     with input_path.open("r", encoding="utf-8") as f:
         for line in f:
@@ -42,14 +45,21 @@ def run(input_path: Path, output_path: Path) -> None:
                 }
             )
 
-    queue = build_queue(leads)
+    queue = build_queue(leads)[: env.max_daily_outreach]
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(queue, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    if feedback_path and feedback_path.exists():
+        feedback_records = json.loads(feedback_path.read_text(encoding="utf-8"))
+        report = summarize_feedback(feedback_records)
+        report_path = output_path.parent / "feedback_report.json"
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
+    parser.add_argument("--feedback", required=False)
     args = parser.parse_args()
-    run(Path(args.input), Path(args.output))
+    run(Path(args.input), Path(args.output), Path(args.feedback) if args.feedback else None)

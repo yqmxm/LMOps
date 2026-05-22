@@ -6,13 +6,13 @@
     "contact_hint": "hello@example.com",
     "target_class": "A_OPC",
     "intent_signal": [
+      "studio",
       "founder",
       "indie",
-      "studio",
-      "collaboration",
       "open for projects",
-      "content ops",
-      "automation"
+      "collaboration",
+      "automation",
+      "content ops"
     ],
     "opportunity_score": 92,
     "priority_tier": "P1",
@@ -26,11 +26,11 @@
     "target_class": "B_ENERGY",
     "intent_signal": [
       "procurement",
-      "rfp",
       "supplier",
       "deployment",
-      "ev charging",
-      "battery"
+      "rfp",
+      "battery",
+      "ev charging"
     ],
     "opportunity_score": 82,
     "priority_tier": "P1",
