@@ -1,0 +1,21 @@
+{
+  "total": 5,
+  "reply_rate": 0.2,
+  "meeting_rate": 0.2,
+  "won_rate": 0.2,
+  "quality_breakdown": {
+    "good_fit": 3,
+    "weak_fit": 1,
+    "noise": 1
+  },
+  "outcome_breakdown": {
+    "replied": 1,
+    "meeting": 1,
+    "no_response": 1,
+    "won": 1,
+    "lost": 1
+  },
+  "suggestions": [
+    "Keep current rules; run another feedback cycle."
+  ]
+}

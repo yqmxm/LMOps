@@ -1,0 +1,7 @@
+[
+  {"target_class":"A_OPC","priority_tier":"P1","outcome":"replied","quality_label":"good_fit"},
+  {"target_class":"A_OPC","priority_tier":"P2","outcome":"meeting","quality_label":"good_fit"},
+  {"target_class":"B_ENERGY","priority_tier":"P1","outcome":"no_response","quality_label":"weak_fit"},
+  {"target_class":"B_ENERGY","priority_tier":"P2","outcome":"won","quality_label":"good_fit"},
+  {"target_class":"A_OPC","priority_tier":"P3","outcome":"lost","quality_label":"noise"}
+]
