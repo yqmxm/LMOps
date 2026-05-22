@@ -1,0 +1,54 @@
+[
+  {
+    "region": "EU",
+    "text": "Founder building indie studio, open for projects and collaboration, looking to scale content ops with automation",
+    "decision_level": "founder",
+    "contact_hint": "hello@example.com",
+    "target_class": "A_OPC",
+    "intent_signal": [
+      "founder",
+      "indie",
+      "studio",
+      "collaboration",
+      "open for projects",
+      "content ops",
+      "automation"
+    ],
+    "opportunity_score": 92,
+    "priority_tier": "P1",
+    "message_angle": "AI提效与品牌放大"
+  },
+  {
+    "region": "EU",
+    "text": "Procurement manager at battery integrator, supplier RFP for EV charging deployment",
+    "decision_level": "manager",
+    "contact_hint": "https://company.com/contact",
+    "target_class": "B_ENERGY",
+    "intent_signal": [
+      "procurement",
+      "rfp",
+      "supplier",
+      "deployment",
+      "ev charging",
+      "battery"
+    ],
+    "opportunity_score": 82,
+    "priority_tier": "P1",
+    "message_angle": "流程效率与供应链响应优化"
+  },
+  {
+    "region": "SEA",
+    "text": "freelancer creator taking clients for digital storytelling experiences",
+    "decision_level": "founder",
+    "contact_hint": "dm open",
+    "target_class": "A_OPC",
+    "intent_signal": [
+      "creator",
+      "freelancer",
+      "taking clients"
+    ],
+    "opportunity_score": 80,
+    "priority_tier": "P1",
+    "message_angle": "AI提效与品牌放大"
+  }
+]
